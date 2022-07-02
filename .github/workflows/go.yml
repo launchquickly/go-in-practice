@@ -12,6 +12,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        buildDir: ["cli/1", "config/1"]
     steps:
     - uses: actions/checkout@v3
 
@@ -19,6 +22,9 @@ jobs:
       uses: actions/setup-go@v3
       with:
         go-version: 1.18
+
+    - name: Build cli example 1
+      run: (cd {{ matrix.buildDir }}; go build -v ./...)
 
     - name: Build cli example 1
       run: (cd cli/1; go build -v ./...)
