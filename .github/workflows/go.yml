@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        buildDir: ["cli/1", "config/1"]
+        buildDir: ["cli/1","cli/2", "cli/3", "cli/4","cli/5", "config/1", "config/2", "config/3", "config/4"]
     steps:
     - uses: actions/checkout@v3
 
@@ -23,32 +23,5 @@ jobs:
       with:
         go-version: 1.18
 
-    - name: Build cli example 1
+    - name: Build example
       run: (cd ${{ matrix.buildDir }}; go build -v ./...)
-
-    - name: Build cli example 1
-      run: (cd cli/1; go build -v ./...)
-
-    - name: Build cli example 2
-      run: (cd cli/2; go build -v ./...)
-
-    - name: Build cli example 3
-      run: (cd cli/3; go build -v ./...)
-
-    - name: Build cli example 4
-      run: (cd cli/4; go build -v ./...)
-
-    - name: Build cli example 5
-      run: (cd cli/5; go build -v ./...)
-
-    - name: Build config example 1
-      run: (cd config/1; go build -v ./...)
-
-    - name: Build config example 2
-      run: (cd config/2; go build -v ./...)
-
-    - name: Build config example 3
-      run: (cd config/3; go build -v ./...)
-
-    - name: Build config example 4
-      run: (cd config/4; go build -v ./...)
