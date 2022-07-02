@@ -34,3 +34,15 @@ jobs:
 
     - name: Build cli example 5
       run: (cd cli/5; go build -v ./...)
+
+    - name: Build config example 1
+      run: (cd config/1; go build -v ./...)
+
+    - name: Build config example 2
+      run: (cd config/2; go build -v ./...)
+
+    - name: Build config example 3
+      run: (cd config/3; go build -v ./...)
+
+    - name: Build config example 4
+      run: (cd config/4; go build -v ./...)
