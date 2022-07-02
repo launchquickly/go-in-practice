@@ -24,7 +24,7 @@ jobs:
         go-version: 1.18
 
     - name: Build cli example 1
-      run: (cd {{ matrix.buildDir }}; go build -v ./...)
+      run: (cd ${{ matrix.buildDir }}; go build -v ./...)
 
     - name: Build cli example 1
       run: (cd cli/1; go build -v ./...)
