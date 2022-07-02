@@ -1,0 +1,36 @@
+name: Build and test various examples
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.18
+
+    - name: Build cli example 1
+      run: (cd cli/1; go build -v ./...)
+
+    - name: Build cli example 2
+      run: (cd cli/2; go build -v ./...)
+
+    - name: Build cli example 3
+      run: (cd cli/3; go build -v ./...)
+
+    - name: Build cli example 4
+      run: (cd cli/4; go build -v ./...)
+
+    - name: Build cli example 5
+      run: (cd cli/5; go build -v ./...)
