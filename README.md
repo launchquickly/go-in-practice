@@ -28,3 +28,4 @@ Notes and code examples created whilst following the [Go In Practice](https://ww
 ### Webserver
 
 - [manners_shutdown.go](/webserver/1/manners_shutdown.go) - graceful shutdown using manners
+- [multiple_handlers.go](/webserver/2/multiple_handlers.go) - simple routing example using handlers

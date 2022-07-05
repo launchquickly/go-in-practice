@@ -16,7 +16,7 @@ jobs:
       matrix:
         buildDir: ["cli/1","cli/2", "cli/3", "cli/4","cli/5",
                    "config/1", "config/2", "config/3", "config/4"
-                   "webserver/1"]
+                   "webserver/1", "webserver/2"]
     steps:
     - uses: actions/checkout@v3
 
