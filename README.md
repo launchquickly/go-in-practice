@@ -24,3 +24,7 @@ Notes and code examples created whilst following the [Go In Practice](https://ww
 - [yaml_config.go](/config/2/yaml_config.go) - loading config from a yaml file
 - [ini_config.go](/config/3/ini_config.go) - loading config from an ini file
 - [env_config.go](/config/4/env_config.go) - retreive config from the environment
+
+### Webserver
+
+- [manners_shutdown.go](/webserver/1/manners_shutdown.go) - graceful shutdown using manners
